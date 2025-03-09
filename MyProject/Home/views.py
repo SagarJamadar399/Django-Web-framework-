@@ -31,7 +31,7 @@ def viewform(request):
 
 def form2(request):
 
-    form = ApplicationForm()
+    form = BookingForm()
     context = {"form":form}
     return render(request, "form.html",context)
    

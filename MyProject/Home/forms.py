@@ -10,19 +10,18 @@ class ApplicationForm(forms.Form):
     posts = (('Manager', 'Manager'),('Cashier', 'Cashier'),('Operator', 'Operator')) 
     field = forms.ChoiceField(choices=posts) 
 
+# from Home.models import * 
 
-# SHIFTS = (("1","dagdsfvdf"),("2","sdzfvdv"),("3","sdfgvzdvds"))
+# class LogForm(forms.ModelForm):
+#     class meta:
+#         model=Logger
+#         fields='__all__'
 
 
-# class LogForm(forms.Form):
-#     fn= forms.CharField(max_length=200,required=False)
-#     ln= forms.CharField(max_length=200)
-#     shift = forms.ChoiceField(choices=SHIFTS)
+from django import forms
+from .models import Booking
 
-from Home.models import * 
-
-class LogForm(forms.ModelForm):
-    class meta:
-        model=Logger
-        fields='__all__'
-    
+class BookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = '__all__'
