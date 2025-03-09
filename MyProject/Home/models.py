@@ -54,7 +54,10 @@ class Drinks(models.Model):
 
 
 class Customer(models.Model): 
-    name = models.CharField(max_length=255) 
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
 
 class Vehicle(models.Model): 
     name = models.CharField(max_length=255) 
