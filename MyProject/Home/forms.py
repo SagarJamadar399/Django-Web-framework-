@@ -23,5 +23,6 @@ from .models import Booking
 
 class BookingForm(forms.ModelForm):
     class Meta:
+        permissions = [('can_change_category','Can Change Category')]
         model = Booking
         fields = '__all__'
